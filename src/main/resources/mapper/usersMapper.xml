@@ -5,7 +5,8 @@
 
 <mapper namespace="users">
     <insert id="save" parameterType="usersDTO">
-        insert into book_table1(bookName, bookAuthor, bookPrice, bookPublisher) values(#{bookName},#{bookAuthor},#{bookPrice},#{bookPublisher})
+        insert into users(user_email, user_name, user_password, user_intro, uploadProfileName, storedProfileName)
+        values(#{user_email},#{user_name},#{user_password},#{user_intro},#{uploadProfileName},#{storedProfileName})
     </insert>
 
     <select id="findBook" resultType="usersDTO">
