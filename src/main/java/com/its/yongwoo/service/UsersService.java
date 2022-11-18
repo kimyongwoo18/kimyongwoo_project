@@ -25,7 +25,7 @@ public class UsersService {
             usersDTO.setUploadProfileName(uploadProfileName);
             usersDTO.setStoredProfileName(storedProfileName);
             // 5. 저장할 경로 지정
-            String savePath = "D:\\spring_img\\" + storedProfileName;
+            String savePath = "D://spring_img//" + storedProfileName;
             // 6. 지정된 경로로 파일 저장 만약 저장에 실패하면 기본프로필로 저장.
             try {
                 userProfile.transferTo(new File(savePath));
@@ -46,7 +46,7 @@ public class UsersService {
         return result;
     }
 
-    public UsersDTO findByEmail(String email) {
-        return usersRepository.findByEmail(email);
+    public UsersDTO findByEmail(String user_email) {
+        return usersRepository.findByEmail(user_email);
     }
 }

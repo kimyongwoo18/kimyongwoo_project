@@ -2,7 +2,6 @@ package com.its.yongwoo.controller;
 
 import com.its.yongwoo.dto.UsersDTO;
 import com.its.yongwoo.service.UsersService;
-import com.sun.tools.jdeprscan.scan.Scan;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,16 +40,17 @@ public class UsersController {
             session.setAttribute("loginName", loginResult.getUser_name());
             session.setAttribute("loginEmail", loginResult.getUser_email());
             session.setAttribute("loginProfile", loginResult.getStoredProfileName());
+            System.out.println("loginEmail" + loginResult.getUser_email());
             return "index";
         }
         return "/userView/userLogin";
     }
     @GetMapping("/user/info")
-    public String info(@RequestParam("email") String email, Model model){
-        UsersDTO usersDTO = usersService.findByEmail(email);
+    public String info(@RequestParam("user_email") String user_email, Model model){
+        UsersDTO usersDTO = usersService.findByEmail(user_email);
         model.addAttribute("users", usersDTO);
 
-        return "/userview/userInfo";
+        return "/userView/userInfo";
     }
 
 

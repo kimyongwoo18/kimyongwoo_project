@@ -34,7 +34,7 @@
                         <li><a href="#" class="nav-link px-2 text-white">둘러보기</a></li>
                     </c:when>
                     <c:otherwise>
-                        <li><a href="/user/info?email=${sessionScope.loginEmail}" class="nav-link px-2 text-white">${sessionScope.loginName}</a></li>
+                        <li><a href="/user/info?user_email=${sessionScope.loginEmail}" class="nav-link px-2 text-white">${sessionScope.loginName}</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">둘러보기</a></li>
                     </c:otherwise>
                 </c:choose>

@@ -17,7 +17,7 @@ public class UsersRepository {
         return sql.selectOne("users.login", usersDTO);
     }
 
-    public UsersDTO findByEmail(String email) {
-        return sql.selectOne("user.findByEmail", email);
+    public UsersDTO findByEmail(String user_email) {
+        return sql.selectOne("users.findByEmail", user_email);
     }
 }
