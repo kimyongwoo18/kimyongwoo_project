@@ -40,4 +40,13 @@ public class UsersService {
             usersRepository.save(usersDTO);
         }
     }
+
+    public UsersDTO login(UsersDTO usersDTO) {
+        UsersDTO result = usersRepository.login(usersDTO);
+        return result;
+    }
+
+    public UsersDTO findByEmail(String email) {
+        return usersRepository.findByEmail(email);
+    }
 }

@@ -9,7 +9,11 @@
         values(#{user_email},#{user_name},#{user_password},#{user_intro},#{uploadProfileName},#{storedProfileName})
     </insert>
 
-    <select id="findBook" resultType="usersDTO">
-        select * from book_table1 where bookId=2
+    <select id="login" resultType="usersDTO">
+        select * from users where user_email = #{user_email} and user_password = #{user_password};
+    </select>
+
+    <select id="findByEmail" resultType="usersDTO">
+        select * from users where user_email = #{user_email};
     </select>
 </mapper>

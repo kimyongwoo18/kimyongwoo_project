@@ -12,4 +12,12 @@ public class UsersRepository {
     public void save(UsersDTO usersDTO) {
         sql.insert("users.save", usersDTO);
     }
+
+    public UsersDTO login(UsersDTO usersDTO) {
+        return sql.selectOne("users.login", usersDTO);
+    }
+
+    public UsersDTO findByEmail(String email) {
+        return sql.selectOne("user.findByEmail", email);
+    }
 }

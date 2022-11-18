@@ -16,20 +16,20 @@
     <script src="/resources/js/jquery.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <style>
-        .main_picture{
-            width: 100%;
-            height: 100%;
-        }
+
     </style>
 </head>
 <body>
 <jsp:include page="../layout/header.jsp" flush="false"></jsp:include>
-<div class="main_picture" style="background-image: url(https://www.c3korea.net/wp-content/uploads/2020/09/03-%ED%95%9C%EA%B8%B8%EC%82%AC.jpg;)">
-    <div class="form-floating text-center m-auto">
+<div class="container-fluid ratio ratio-4x3" style="background-image: url(https://www.c3korea.net/wp-content/uploads/2020/09/03-%ED%95%9C%EA%B8%B8%EC%82%AC.jpg;)">
+    <div class="form-floating text-center">
         <button class="btn btn-dark" onclick="location.href='/'">
             <h3>이미지 구경하기</h3>
         </button>
     </div>
 </div>
+<footer class="my-3 text-center text-small">
+    <p class="mb-1">&copy; PictureControll</p>
+</footer>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package com.its.yongwoo.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.web.multipart.MultipartFile;
@@ -8,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
 public class UsersDTO {
 
     private Long id;
