@@ -36,6 +36,7 @@
                     <c:otherwise>
                         <li><a href="/user/info?user_email=${sessionScope.loginEmail}" class="nav-link px-2 text-white">${sessionScope.loginName}</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">둘러보기</a></li>
+                        <li><a href="/photo/save" class="nav-link px-2 text-white">사진올리기</a></li>
                     </c:otherwise>
                 </c:choose>
             </ul>
@@ -50,7 +51,7 @@
                     </c:when>
 
                     <c:otherwise>
-                        <button type="button" class="btn btn-outline-light me-2">로그아웃</button>
+                        <button type="button" class="btn btn-outline-light me-2" onclick=location.href="/user/logout">로그아웃</button>
                     </c:otherwise>
                 </c:choose>
             </div>

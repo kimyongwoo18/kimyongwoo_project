@@ -3,6 +3,7 @@ package com.its.yongwoo.dto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.sql.Timestamp;
 @Getter
@@ -14,9 +15,11 @@ public class PhotosDTO {
     private Long user_id;
     private String photo_title;
     private String photo_contents;
-    private String photo_path;
-    private int total_like;
-    private int hits;
+    private MultipartFile photos;
+    private String uploadProfileName;
+    private String storedProfileName;
+    private int total_like = 0;
+    private int hits = 0;
     private Timestamp created_at;
     private Timestamp deleted_at;
 

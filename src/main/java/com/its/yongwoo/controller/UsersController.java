@@ -18,7 +18,7 @@ public class UsersController {
     @Autowired
     UsersService usersService;
     SqlSessionTemplate session;
-
+    /*회원가입 기능*/
     @GetMapping("/user/save")
     public String saveForm(){
         return "userView/userSave";
@@ -29,6 +29,7 @@ public class UsersController {
 
         return "index";
     }
+    /*로그인 기능*/
     @GetMapping("/user/login")
     public String loginForm(){
         return "/userView/userLogin";
@@ -45,6 +46,13 @@ public class UsersController {
         }
         return "/userView/userLogin";
     }
+    /*로그아웃 기능*/
+    @GetMapping("/user/logout")
+    public String logout(HttpSession session){
+        session.invalidate();
+        return "index";
+    }
+    /*내정보 기능(이미지 경로 아직 안됨 ;)*/
     @GetMapping("/user/info")
     public String info(@RequestParam("user_email") String user_email, Model model){
         UsersDTO usersDTO = usersService.findByEmail(user_email);
@@ -52,8 +60,6 @@ public class UsersController {
 
         return "/userView/userInfo";
     }
-
-
 
 
 }

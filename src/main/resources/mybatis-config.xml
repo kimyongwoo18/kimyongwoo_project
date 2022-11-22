@@ -4,5 +4,7 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.its.yongwoo.dto.UsersDTO" alias="usersDTO"></typeAlias>
+        <typeAlias type="com.its.yongwoo.dto.CameraDTO" alias="cameraDTO"></typeAlias>
+        <typeAlias type="com.its.yongwoo.dto.PhotosDTO" alias="photosDTO"></typeAlias>
     </typeAliases>
 </configuration>

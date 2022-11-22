@@ -1,6 +1,7 @@
 package com.its.yongwoo.service;
 
 import com.its.yongwoo.dto.UsersDTO;
+
 import com.its.yongwoo.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,7 @@ public class UsersService {
             usersDTO.setUploadProfileName(uploadProfileName);
             usersDTO.setStoredProfileName(storedProfileName);
             // 5. 저장할 경로 지정
-            String savePath = "D://spring_img//" + storedProfileName;
+            String savePath = "D://project_img/" + storedProfileName;
             // 6. 지정된 경로로 파일 저장 만약 저장에 실패하면 기본프로필로 저장.
             try {
                 userProfile.transferTo(new File(savePath));
@@ -36,7 +37,7 @@ public class UsersService {
 
         }else{
             //7. 프로필 사진 안넣어도 기본프로필로 저장.
-            usersDTO.setStoredProfileName("indexProfile");
+            usersDTO.setStoredProfileName("indexProfile.jpg");
             usersRepository.save(usersDTO);
         }
     }
